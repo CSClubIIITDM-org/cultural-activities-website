@@ -4,7 +4,7 @@ export default {
 	type: 'document',
 	fields: [
 		{
-			name: 'clubname',
+			name: 'name',
 			title: 'Club Name',
 			type: 'string',
 		},
@@ -25,8 +25,13 @@ export default {
 		},
 		{
 			name: 'link',
-			title: 'Club Name',
+			title: 'Link',
 			type: 'url',
+		},
+		{
+			name: 'past',
+			title: 'Mark as past event?',
+			type: 'boolean',
 		},
 		{
 			name: 'image',
@@ -37,6 +42,9 @@ export default {
 			},
 		},
 	],
+	initialValue: {
+		past: false,
+	},
 	preview: {
 		select: {
 			title: 'name',
