@@ -1,0 +1,67 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\devpu\AppData\Roaming\nvm\v14.16.1\node_modules\@sanity\cli\vendor\yarn install --json --non-interactive --ignore-engines --registry https://registry.npmjs.org
+
+PATH: 
+  C:\Users\devpu\AppData\Roaming\nvm\v14.16.1\node_modules\vendor;C:\Program Files\PowerShell\7;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Python39\Scripts\;C:\Program Files\Python39\;C:\Python39\Scripts\;C:\Python39\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Users\devpu\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\dotnet\;C:\Program Files\Go\bin;C:\Program Files\PowerShell\7\;C:\Users\devpu\scoop\shims;C:\Users\devpu\AppData\Local\Microsoft\WindowsApps;C:\Users\devpu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\GitHub CLI\;C:\Users\devpu\AppData\Roaming\npm;C:\Program Files\JetBrains\CLion 2020.3\bin;C:\Users\devpu\.deno\bin;C:\Users\devpu\go\bin;C:\Users\devpu\AppData\Roaming\Python\Python39\Scripts;C:\Users\devpu\go\bin;C:\Users\devpu\AppData\Local\Microsoft\WindowsApps
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npmjs.org/date-fns/-/date-fns-2.23.0.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\devpu\AppData\Roaming\nvm\v14.16.1\node_modules\@sanity\cli\vendor\yarn:141406:19)
+      at Object.onceWrapper (events.js:421:28)
+      at ClientRequest.emit (events.js:315:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:784:9)
+      at Object.onceWrapper (events.js:421:28)
+      at TLSSocket.emit (events.js:327:22)
+      at TLSSocket.Socket._onTimeout (net.js:483:8)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7)
+
+npm manifest: 
+  {
+    "name": "cultcms",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);",
+    "main": "package.json",
+    "author": "Puru Vijay <devpuruvj@gmail.com>",
+    "license": "UNLICENSED",
+    "scripts": {
+      "start": "sanity start",
+      "build": "sanity build"
+    },
+    "keywords": [
+      "sanity"
+    ],
+    "dependencies": {
+      "@sanity/base": "^2.17.2",
+      "@sanity/components": "^2.14.0",
+      "@sanity/core": "^2.17.2",
+      "@sanity/default-layout": "^2.17.2",
+      "@sanity/default-login": "^2.17.2",
+      "@sanity/desk-tool": "^2.17.2",
+      "@sanity/vision": "^2.17.2",
+      "prop-types": "^15.7",
+      "react": "^17.0",
+      "react-dom": "^17.0"
+    },
+    "devDependencies": {},
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/WebOpsIIITDMK/cultural-activities-website.git"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
