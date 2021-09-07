@@ -9,18 +9,18 @@ export default {
 			type: 'string',
 		},
 		{
-			name: 'event-name',
+			name: 'event_name',
 			title: 'Event Name',
 			type: 'string',
 		},
 		{
-			name: 'event-description',
+			name: 'event_description',
 			title: 'Event Description',
 			type: 'string',
 		},
 		{
-			name: 'Date Time',
-			title: 'datetime',
+			name: 'date_time',
+			title: 'Date Time',
 			type: 'datetime',
 		},
 		{
