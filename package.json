@@ -1,6 +1,7 @@
 {
 	"name": "cult-website",
 	"version": "0.0.1",
+	"type": "module",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -11,5 +12,7 @@
 		"@sveltejs/kit": "^1.0.0-next.164",
 		"svelte": "^3.42.0"
 	},
-	"type": "module"
+	"dependencies": {
+		"lazysizes": "^5.3.2"
+	}
 }
