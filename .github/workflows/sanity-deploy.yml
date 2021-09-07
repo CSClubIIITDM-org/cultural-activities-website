@@ -6,6 +6,9 @@ jobs:
   sanity-deploy:
     runs-on: ubuntu-18.04
     name: Deploy Sanity
+    defaults:
+      run:
+        working-directory: ./cultcms
     steps:
       - uses: actions/checkout@v2
       - uses: sanity-io/github-action-sanity@v0.1-alpha
