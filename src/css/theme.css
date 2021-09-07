@@ -8,9 +8,9 @@ body {
 
 	--app-color-light: white;
 	--app-color-light-rgb: 255, 255, 255;
-	--app-color-light-contrast: rgb(2, 8, 26);
+	--app-color-light-contrast: #02081a;
 
-	--app-color-dark: rgb(1, 22, 39);
+	--app-color-dark: #011627;
 	--app-color-dark-rgb: 1, 22, 39;
 	--app-color-dark-contrast: white;
 
