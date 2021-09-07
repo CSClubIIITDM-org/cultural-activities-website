@@ -4,6 +4,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "svelte-kit dev",
+		"prebuild": "cd scripts && node generate-announcements.js",
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview"
 	},
