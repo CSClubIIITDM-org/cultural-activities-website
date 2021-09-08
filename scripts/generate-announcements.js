@@ -18,7 +18,7 @@ const images = sanityImage(client);
 
 async function main() {
 	/** @type {import('./types').SanityAnnouncement[]} */
-	const query = await client.fetch('*[_type == "announcement"]');
+	const events = await client.fetch('*[_type == "announcement"]');
 
 	/** @type {import('./types').Announcement[]} */
 	const finalEvents = [];
@@ -31,29 +31,20 @@ async function main() {
 	for (const img of existingImages) fsp.unlink(img);
 
 	// Now process images
-	for (const {
-		date_time,
-		past,
-		image: eventImage,
-		link,
-		name: clubName,
-		event_description,
-		event_name,
-		_id,
-	} of query) {
+	for (const event of events) {
 		/** @type {import('./types').Announcement} */
 		const eventObj = {
-			datetime: date_time,
-			eventDescription: event_description,
-			eventName: event_name,
-			link,
-			name: clubName,
-			past,
+			datetime: event.date_time,
+			eventDescription: event.event_description,
+			eventName: event.event_name,
+			link: event.link,
+			name: event.name,
+			past: event.past,
 		};
 
-		if (eventImage?.asset) {
+		if (event.image?.asset) {
 			const image = images
-				.image(eventImage?.asset)
+				.image(event.image?.asset)
 				.height(200)
 				.fit('max')
 				.format('webp')
@@ -62,9 +53,9 @@ async function main() {
 
 			// Now download and write to file
 			const imgBuffer = await (await fetch(image)).buffer();
-			fsp.writeFile(`../static/announcements-media/${_id}.webp`, imgBuffer);
+			fsp.writeFile(`../static/announcements-media/${event._id}.webp`, imgBuffer);
 
-			eventObj.image = { webp: `/announcements-media/${_id}.webp` };
+			eventObj.image = { webp: `/announcements-media/${event._id}.webp` };
 		}
 
 		finalEvents.push(eventObj);
