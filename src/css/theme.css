@@ -14,9 +14,9 @@ body {
 	--app-color-dark-rgb: 1, 22, 39;
 	--app-color-dark-contrast: white;
 
-	--app-color-primary: #03759b;
-	--app-color-primary-rgb: 3, 117, 155;
-	--app-color-primary-contrast: white;
+	--app-color-primary: rgb(240, 84, 84);
+	--app-color-primary-rgb: 240, 84, 84;
+	--app-color-primary-contrast: #011627;
 
 	--app-gradient-primary: linear-gradient(112.7deg, #3591af 11.4%, #03759b 70.2%);
 }

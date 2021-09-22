@@ -9,14 +9,14 @@
 		"preview": "svelte-kit preview"
 	},
 	"devDependencies": {
-		"@sanity/client": "^2.18.0",
+		"@sanity/client": "^2.19.0",
 		"@sanity/image-url": "^1.0.1",
-		"@sveltejs/adapter-static": "^1.0.0-next.18",
-		"@sveltejs/kit": "^1.0.0-next.164",
-		"autoprefixer": "^10.3.4",
+		"@sveltejs/adapter-static": "^1.0.0-next.19",
+		"@sveltejs/kit": "^1.0.0-next.170",
+		"autoprefixer": "^10.3.5",
 		"dotenv": "^10.0.0",
 		"node-fetch": "^3.0.0",
-		"svelte": "^3.42.0"
+		"svelte": "^3.42.6"
 	},
 	"dependencies": {
 		"lazysizes": "^5.3.2"
