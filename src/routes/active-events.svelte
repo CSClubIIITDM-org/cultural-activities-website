@@ -37,7 +37,7 @@
         <div class='description'>
           <h1 class="event-name">{event.eventName}</h1>
           <p>{event.eventDescription}</p>
-          <a href={event.link}>Event link</a>
+          <a href={event.link} target="_blank" rel="external">Event link</a>
       </div> 
       <div class='date-time-div'>
           <h2 class="text">{getdate(event.datetime)}<br>{gettime(event.datetime)}</h2>
