@@ -12,7 +12,7 @@
 </script>
 
 <script>
-  import '../css/theme.css';
+  
   export let events;
   function getdate(i){
     var date = new Date(i);
