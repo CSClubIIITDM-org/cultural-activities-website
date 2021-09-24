@@ -12,7 +12,7 @@
 </script>
 
 <script>
-  import '../theme.css';
+  import '../css/theme.css';
   export let events;
   function getdate(i){
     var date = new Date(i);
@@ -24,9 +24,7 @@
   }
 </script>
 
-<svelte:head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-</svelte:head>
+
   <div class="events">
     <h1 class='text_center heading'>Upcoming Events</h1>
     {#each events as event}
