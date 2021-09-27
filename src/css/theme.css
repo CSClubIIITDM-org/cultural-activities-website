@@ -2,17 +2,17 @@ body {
 	--transition-duration: 150ms;
 
 	--app-main-font-family: 'Raleway', sans-serif;
-	--app-heading-font-family: 'Mali', serif;
+	--app-heading-font-family: 'Lato', serif;
 
 	--app-color-shell: #011627;
 
-	--app-color-light: white;
-	--app-color-light-rgb: 255, 255, 255;
-	--app-color-light-contrast: #02081a;
+	--app-color-dark: white;
+	--app-color-dark-rgb: 255, 255, 255;
+	--app-color-dark-contrast: #02081a;
 
-	--app-color-dark: #011627;
-	--app-color-dark-rgb: 1, 22, 39;
-	--app-color-dark-contrast: white;
+	--app-color-light: #011627;
+	--app-color-light-rgb: 1, 22, 39;
+	--app-color-light-contrast: white;
 
 	--app-color-primary: rgb(240, 84, 84);
 	--app-color-primary-rgb: 240, 84, 84;

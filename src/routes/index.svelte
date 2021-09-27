@@ -1,10 +1,127 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Icon from '$lib/icon.svelte';
+	import { mdiDiscord, mdiFacebook, mdiInstagram, mdiTwitter } from '@mdi/js';
+</script>
 
-Hello
+<div class="sidebar">
+	<a href="#twitter"><Icon path={mdiTwitter} /></a>
+	<a href="#facebook"><Icon path={mdiFacebook} /></a>
+	<a href="#instagram"><Icon path={mdiInstagram} /></a>
+	<a href="#discord"><Icon path={mdiDiscord} /></a>
+</div>
+
+<div class="splash-page">
+	<h1 class="heading1">IIITDM KANCHEEPURAM</h1>
+	<h1 class="heading2">CULTKANCHI</h1>
+	<br />
+	<br />
+	<p>
+		We are a team of interdisciplinary (and jobless) engineering students from IIITDM Kancheepuram.
+	</p>
+	<p>We aim to provide a platform for our students to express their talents in fine arts.</p>
+</div>
 
 <style>
-	h1 {
+	:global(body) {
+		background-image: url('/announcements-media/PXL_20210502_155917986 1.png');
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		scrollbar-width: none;
+	}
+
+	.heading1 {
+		font-style: normal;
+		font-size: 60px;
+		font-weight: normal;
+		letter-spacing: -0.02em;
+		color: var(--app-color-dark);
+	}
+
+	.heading2 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 70px;
+		letter-spacing: 0.04em;
 		color: var(--app-color-primary);
+	}
+
+	.splash-page {
+		padding-top: 5%;
+		text-align: center;
+	}
+
+	.splash-page p {
+		font-size: 30px;
+		padding: 0px 150px;
+		color: var(--app-color-dark);
+	}
+
+	.sidebar {
+		padding-top: 10%;
+		height: 100%;
+		width: 12%;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		overflow-x: hidden;
+		text-align: center;
+	}
+
+	.sidebar a {
+		padding: 10px;
+		text-decoration: none;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+		margin: 1rem;
+		fill: var(--app-color-light);
+		background-color: var(--app-color-primary);
+	}
+
+	.sidebar a :global(svg) {
+		width: 40px;
+		height: auto;
+	}
+
+	@media screen and (max-width: 650px) {
+		.heading1 {
+			font-size: 30px;
+			letter-spacing: -0.02em;
+		}
+
+		.heading2 {
+			font-size: 40px;
+			letter-spacing: 0.04em;
+		}
+
+		.sidebar {
+			width: 100%;
+			margin-top: 500px;
+			float: bottom;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		.sidebar a {
+			font-size: 30px;
+			display: inline;
+		}
+
+		.splash-page {
+			margin-left: 0px;
+			padding: 0px 10px;
+		}
+
+		.splash-page p {
+			font-size: 20px;
+			padding: 10px 50px;
+			line-height: 24px;
+		}
 	}
 </style>
