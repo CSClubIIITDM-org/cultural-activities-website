@@ -1,5 +1,5 @@
 <script>
-	import Icon from '$lib/Icon.svelte';
+	import Icon from '../lib/Icon.svelte';
 	import { fadeIn, fadeOut } from '$lib/transitions/fade';
 	import { mdiDiscord, mdiFacebook, mdiInstagram, mdiTwitter } from '@mdi/js';
 </script>
