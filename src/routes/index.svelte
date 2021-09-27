@@ -4,6 +4,7 @@
 	import { mdiDiscord, mdiFacebook, mdiInstagram, mdiTwitter } from '@mdi/js';
 </script>
 
+<!--  -->
 <div in:fadeIn out:fadeOut>
 	<div class="bg-image" />
 
