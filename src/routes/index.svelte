@@ -1,35 +1,47 @@
 <script>
-	import Icon from '$lib/icon.svelte';
+	import Icon from '$lib/Icon.svelte';
+	import { fadeIn, fadeOut } from '$lib/transitions/fade';
 	import { mdiDiscord, mdiFacebook, mdiInstagram, mdiTwitter } from '@mdi/js';
 </script>
 
-<div class="sidebar">
-	<a href="#twitter"><Icon path={mdiTwitter} /></a>
-	<a href="#facebook"><Icon path={mdiFacebook} /></a>
-	<a href="#instagram"><Icon path={mdiInstagram} /></a>
-	<a href="#discord"><Icon path={mdiDiscord} /></a>
-</div>
+<div in:fadeIn out:fadeOut>
+	<div class="bg-image" />
 
-<div class="splash-page">
-	<h1 class="heading1">IIITDM KANCHEEPURAM</h1>
-	<h1 class="heading2">CULTKANCHI</h1>
-	<br />
-	<br />
-	<p>
-		We are a team of interdisciplinary (and jobless) engineering students from IIITDM Kancheepuram.
-	</p>
-	<p>We aim to provide a platform for our students to express their talents in fine arts.</p>
+	<div class="sidebar">
+		<a href="#twitter"> <Icon path={mdiTwitter} /> </a>
+		<a href="#facebook"> <Icon path={mdiFacebook} /> </a>
+		<a href="#instagram"> <Icon path={mdiInstagram} /> </a>
+		<a href="#discord"> <Icon path={mdiDiscord} /> </a>
+	</div>
+
+	<div class="splash-page">
+		<h1 class="heading1">IIITDM KANCHEEPURAM</h1>
+		<h1 class="heading2">CULTKANCHI</h1>
+		<br />
+		<br />
+		<p>
+			We are a team of interdisciplinary (and jobless) engineering students from IIITDM
+			Kancheepuram.
+		</p>
+		<p>We aim to provide a platform for our students to express their talents in fine arts.</p>
+	</div>
 </div>
 
 <style>
-	:global(body) {
-		background-image: url('/announcements-media/PXL_20210502_155917986 1.png');
-		width: 100%;
+	.bg-image {
 		height: 100%;
+		width: 100%;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -1;
+
+		background-image: url('/cover-image.webp');
+
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		scrollbar-width: none;
 	}
 
 	.heading1 {

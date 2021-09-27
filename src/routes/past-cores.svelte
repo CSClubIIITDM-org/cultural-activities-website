@@ -46,10 +46,13 @@
 <style>
 	main {
 		padding: 25px;
+
 		background-color: var(--app-color-dark);
 	}
+
 	h1 {
 		text-align: center;
+
 		color: var(--app-color-light);
 	}
 	.container {
@@ -63,9 +66,11 @@
 	.clubName {
 		margin-bottom: 0px;
 	}
-	.yearActive {
+
+	/* .yearActive {
 		margin-top: 0px;
-	}
+	} */
+
 	.clubCard {
 		padding: 10px;
 		background-color: var(--app-color-shell);
