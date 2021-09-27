@@ -1,16 +1,20 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+import Icon from "$lib/icon.svelte";
+import {mdiDiscord, mdiFacebook, mdiInstagram, mdiTwitter} from "@mdi/js";
+</script>
 
 <div class="sidebar">
-	<a href="#twitter"><i class="fa fa-fw fa-twitter"></i></a>
-	<a href="#facebook"><i class="fa fa-fw fa-facebook"></i></a>
-	<a href="#instagram"><i class="fa fa-fw fa-instagram"></i></a>
-	<a href="#discord"><i class="fa fa-fw fa-home"></i></a>
+	<a href="#twitter"><Icon path={mdiTwitter}/></a>
+	<a href="#facebook"><Icon path={mdiFacebook}/></a>
+	<a href="#instagram"><Icon path={mdiInstagram}/></a>
+	<a href="#discord"><Icon path={mdiDiscord}/></a>
 </div>
 
 <div class="splash-page">
 	<h1 class="heading1">IIITDM KANCHEEPURAM</h1>
 	<h1 class="heading2">CULTKANCHI</h1>
+    <br>
+    <br>
 	<p>We are a team of interdisciplinary (and jobless) engineering students from IIITDM Kancheepuram.</p>
 	<p>We aim to provide a platform for our students to express their talents in fine arts.</p>
 </div>
@@ -27,21 +31,19 @@
     }
 
     .heading1 {
-        font-family: Lato;
         font-style: normal;
         font-size: 60px;
         font-weight: normal;
         letter-spacing: -0.02em;
-        color: white;
+        color: var(--app-color-dark);
     }
 
     .heading2 {
-        font-family: Lato;
         font-style: normal;
         font-weight: 600;
         font-size: 70px;
         letter-spacing: 0.04em;
-        color: red;
+        color: var(--app-color-primary);
     }
 
     .splash-page {
@@ -52,7 +54,7 @@
     .splash-page p {
         font-size: 30px;
         padding: 0px 150px;
-        color: white;
+        color: var(--app-color-dark);
     }
 
     .sidebar {
@@ -70,9 +72,19 @@
     .sidebar a {
         padding: 10px;
         text-decoration: none;
-        font-size: 30px;
-        display: block;
-        color: red;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        margin: 1rem;
+        fill: var(--app-color-light);
+        background-color: var(--app-color-primary);
+    }
+
+    .sidebar a :global(svg) {
+        width: 40px;
+        height: auto;
     }
 
     @media screen and (max-width: 650px) {
