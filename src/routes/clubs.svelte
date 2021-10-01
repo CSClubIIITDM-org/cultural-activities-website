@@ -1,5 +1,5 @@
 <script>
-	import Icon from '$lib/icon.svelte';
+	import Icon from '$lib/AppIcon.svelte';
 	import { mdiFacebook, mdiInstagram, mdiTwitter } from '@mdi/js';
 </script>
 
