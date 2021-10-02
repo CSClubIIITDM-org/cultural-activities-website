@@ -131,7 +131,7 @@
 	.heading {
 		margin: 20px;
 		font-family: var(--app-heading-font-family);
-		color: var(--app-color-light);
+		color: var(--app-color-dark);
 	}
 
 	a {
