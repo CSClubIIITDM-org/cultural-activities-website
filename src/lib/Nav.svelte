@@ -21,7 +21,7 @@
 		<a href="/active-events" aria-current={isCurrent('/active-events')}>ANNOUNCEMENTS</a>
 		<a href="/">PAST EVENTS</a>
 		<a href="/">CALENDAR</a>
-		<a href="/clubs">CLUBS</a>
+		<a href="/clubs" aria-current={isCurrent('/clubs')}>CLUBS</a>
 		<a href="/past-cores" aria-current={isCurrent('/past-cores')}>PAST CORES</a>
 	</nav>
 	<div />
