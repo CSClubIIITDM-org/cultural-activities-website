@@ -30,7 +30,7 @@
 	{#each events as event}
 		<div class="event">
 			<div class="club-image-div">
-				<img class="club-image" src={event.image.webp} alt="{event.name} logo" />
+				
 				<br /><br />
 			</div>
 
