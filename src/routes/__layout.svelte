@@ -1,5 +1,9 @@
 <script>
+	import Nav from '$lib/Nav.svelte';
 	import '../css/global.css';
 </script>
 
-<slot />
+<main>
+	<Nav />
+	<slot />
+</main>

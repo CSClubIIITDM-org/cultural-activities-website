@@ -26,7 +26,7 @@ body {
 html {
 	height: 100%;
 
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 html,
@@ -103,7 +103,7 @@ button:disabled {
 	cursor: default;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
 	background-color: transparent;
 	width: 15px;
 }
@@ -118,7 +118,7 @@ button:disabled {
 
 ::-webkit-scrollbar-thumb:hover {
 	background-color: rgba(var(--app-color-dark-rgb), 1);
-}
+} */
 
 *::selection {
 	background-color: rgba(var(--app-color-primary-rgb), 0.4);
@@ -135,7 +135,8 @@ a[href] {
 	transition: color 200ms ease-out;
 }
 
-a[href]:hover {
+a[href]:hover,
+a[href]:focus-visible {
 	color: var(--app-color-primary-tint);
 }
 

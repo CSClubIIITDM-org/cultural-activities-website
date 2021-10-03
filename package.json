@@ -9,17 +9,18 @@
 		"preview": "svelte-kit preview"
 	},
 	"devDependencies": {
-		"@sanity/client": "^2.19.0",
-		"@sanity/image-url": "^1.0.1",
-		"@sveltejs/adapter-static": "^1.0.0-next.19",
-		"@sveltejs/kit": "^1.0.0-next.170",
-		"autoprefixer": "^10.3.5",
-		"dotenv": "^10.0.0",
-		"node-fetch": "^3.0.0",
-		"svelte": "^3.42.6"
+		"@sanity/client": "2.19.0",
+		"@sanity/image-url": "1.0.1",
+		"@sveltejs/adapter-static": "1.0.0-next.20",
+		"@sveltejs/kit": "1.0.0-next.174",
+		"autoprefixer": "10.3.6",
+		"dotenv": "10.0.0",
+		"node-fetch": "3.0.0",
+		"svelte": "3.43.0"
 	},
 	"dependencies": {
 		"@mdi/js": "^6.1.95",
+		"date-fns": "^2.24.0",
 		"lazysizes": "^5.3.2"
 	}
 }

@@ -6,6 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // We import object and document schemas
 import announcements from './announcements';
+import events from './events';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -17,5 +18,6 @@ export default createSchema({
 		// The following are document types which will appear
 		// in the studio.
 		announcements,
+		events,
 	]),
 });
