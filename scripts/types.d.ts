@@ -31,3 +31,12 @@ export type Announcement = {
 		webp: string;
 	};
 };
+
+export type Event = {
+	/** This is the club name */
+	name: string;
+	datetime: string;
+	eventDescription: string;
+	eventName: string;
+	link: string;
+};

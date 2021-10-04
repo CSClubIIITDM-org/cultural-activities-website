@@ -14,31 +14,28 @@ const client = sanity({
 
 async function main() {
 	/** @type {import('./types').SanityAnnouncement[]} */
-	const events = await client.fetch('*[_type == "announcement"]');
+	const events = await client.fetch('*[_type == "event"]');
 
-	/** @type {import('./types').Announcement[]} */
+	console.log(events);
+
+	/** @type {import('./types').Event[]} */
 	const finalEvents = [];
 
 	// Now process images
 	for (const event of events) {
-		/** @type {import('./types').Announcement} */
+		/** @type {import('./types').Event} */
 		const eventObj = {
 			datetime: event.date_time,
 			eventDescription: event.event_description,
 			eventName: event.event_name,
 			link: event.link,
 			name: event.name,
-			past: event.past,
 		};
 
 		finalEvents.push(eventObj);
 	}
 
-	const activeEvents = finalEvents.filter(({ past }) => !past);
-	const pastEvents = finalEvents.filter(({ past }) => past);
-
-	fsp.writeFile('../static/data/active-events.json', JSON.stringify(activeEvents));
-	fsp.writeFile('../static/data/past-events.json', JSON.stringify(pastEvents));
+	fsp.writeFile('../static/data/calendar.json', JSON.stringify(finalEvents));
 }
 
 main();

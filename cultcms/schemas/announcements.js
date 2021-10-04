@@ -7,6 +7,17 @@ export default {
 			name: 'name',
 			title: 'Club Name',
 			type: 'string',
+			options: {
+				list: [
+					{ title: 'Art Club', value: 'art' },
+					{ title: 'Cultural Affairs', value: 'cultural-affairs' },
+					{ title: 'Dance Club', value: 'dance' },
+					{ title: 'EPIC', value: 'epic' },
+					{ title: 'Media Club', value: 'media' },
+					{ title: 'Music Club', value: 'music' },
+					{ title: 'Tamizh Saalaram', value: 'tamizh-saalaram' },
+				],
+			},
 		},
 		{
 			name: 'event_name',
@@ -33,22 +44,8 @@ export default {
 			title: 'Mark as past event?',
 			type: 'boolean',
 		},
-		{
-			name: 'image',
-			title: 'Image',
-			type: 'image',
-			options: {
-				hotspot: true,
-			},
-		},
 	],
 	initialValue: {
 		past: false,
-	},
-	preview: {
-		select: {
-			title: 'name',
-			media: 'image',
-		},
 	},
 };
