@@ -35,7 +35,10 @@ async function main() {
 		finalEvents.push(eventObj);
 	}
 
-	fsp.writeFile('../static/data/calendar.json', JSON.stringify(finalEvents));
+	fsp.writeFile(
+		'../static/data/calendar.json',
+		JSON.stringify(finalEvents.sort((a, b) => +new Date(b.datetime) - +new Date(a.datetime)))
+	);
 }
 
 main();

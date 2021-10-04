@@ -1,5 +1,5 @@
 <script>
-	import ClubComponent from './components/clubcomponent.svelte';
+	import ClubComponent from '$lib/components/clubcomponent.svelte';
 
 	const clubs = [
 		{
