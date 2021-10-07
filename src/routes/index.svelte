@@ -82,18 +82,27 @@
 		left: 0;
 		overflow-x: hidden;
 		text-align: center;
+
+		display: flex;
+		flex-direction: column;
 	}
 
 	.sidebar a {
 		padding: 10px;
+		margin: 1rem;
+
 		text-decoration: none;
+
 		width: 60px;
 		height: 60px;
+
 		border-radius: 50%;
+
 		display: grid;
 		place-items: center;
-		margin: 1rem;
+
 		fill: var(--app-color-light);
+
 		background-color: var(--app-color-primary);
 	}
 
@@ -115,15 +124,16 @@
 
 		.sidebar {
 			width: 100%;
-			margin-top: 500px;
+			height: auto;
+			/* margin-top: 500px; */
 			float: bottom;
 			overflow: hidden;
 			text-align: center;
-		}
 
-		.sidebar a {
-			font-size: 30px;
-			display: inline;
+			flex-direction: row;
+
+			bottom: 1vh !important;
+			top: auto;
 		}
 
 		.splash-page {
