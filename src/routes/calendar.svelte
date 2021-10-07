@@ -15,6 +15,7 @@
 <script>
 	import { clubNames } from '$lib/club-map';
 	import { format } from 'date-fns';
+	import { fadeIn, fadeOut } from '$lib/transitions/fade';
 
 	/** @type {import('scripts/types').Event[]} */
 	export let events;
@@ -33,36 +34,38 @@
 	<title>Calendar - Cultural Activities</title>
 </svelte:head>
 
-{#each Object.values(monthWiseEvents) as events}
-	{#if events.length !== 0}
-		<h1 class="month-name">{format(new Date(events[0].datetime), 'MMMM')}</h1>
-		{#each events as event}
-			<div class="event">
-				<div class="club-image-div">
-					<!-- <img class="club-image" src={event.image.webp} alt="{event.name} logo" /> -->
-					<br /><br />
-				</div>
+<div in:fadeIn out:fadeOut>
+	{#each Object.values(monthWiseEvents) as events}
+		{#if events.length !== 0}
+			<h1 class="month-name">{format(new Date(events[0].datetime), 'MMMM')}</h1>
+			{#each events as event}
+				<div class="event">
+					<div class="club-image-div">
+						<!-- <img class="club-image" src={event.image.webp} alt="{event.name} logo" /> -->
+						<br /><br />
+					</div>
 
-				<div class="club-name-div">
-					<h3 class="club-name">{clubNames[event.name]}</h3>
-				</div>
+					<div class="club-name-div">
+						<h3 class="club-name">{clubNames[event.name]}</h3>
+					</div>
 
-				<div class="description">
-					<h2 class="event-name">{event.eventName}</h2>
-					<p>{event.eventDescription}</p>
-					<a href={event.link} target="_blank" rel="external">Event link</a>
-				</div>
+					<div class="description">
+						<h2 class="event-name">{event.eventName}</h2>
+						<p>{event.eventDescription}</p>
+						<a href={event.link} target="_blank" rel="external">Event link</a>
+					</div>
 
-				<div class="date-time-div">
-					<h3 class="text">
-						{format(new Date(event.datetime), 'h:m a')} <br />
-						{format(new Date(event.datetime), 'd LLL, yy')}
-					</h3>
+					<div class="date-time-div">
+						<h3 class="text">
+							{format(new Date(event.datetime), 'h:m a')} <br />
+							{format(new Date(event.datetime), 'd LLL, yy')}
+						</h3>
+					</div>
 				</div>
-			</div>
-		{/each}
-	{/if}
-{/each}
+			{/each}
+		{/if}
+	{/each}
+</div>
 
 <style>
 	.month-name {

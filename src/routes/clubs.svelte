@@ -1,5 +1,6 @@
 <script>
 	import ClubComponent from '$lib/components/clubcomponent.svelte';
+	import { fadeIn, fadeOut } from '$lib/transitions/fade';
 
 	const clubs = [
 		{
@@ -110,7 +111,7 @@
 	];
 </script>
 
-<div class="container">
+<div class="container" in:fadeIn out:fadeOut>
 	<div class="title">
 		<h1>Meet The Team</h1>
 	</div>

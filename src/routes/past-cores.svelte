@@ -1,4 +1,6 @@
 <script>
+	import { fadeIn, fadeOut } from '$lib/transitions/fade';
+
 	const clubs = [
 		{
 			clubName: 'Club Name',
@@ -27,7 +29,11 @@
 	];
 </script>
 
-<main>
+<svelte:head>
+	<title>Past cores - Cultural Activities IIITDMK</title>
+</svelte:head>
+
+<main in:fadeIn out:fadeOut>
 	<h1>Past cores</h1>
 
 	<div class="container">
@@ -77,7 +83,7 @@
 		text-align: center;
 		color: var(--app-color-dark);
 		margin: 5px;
-		border-radius: 10%;
+		border-radius: 24px;
 
 		shape-outside: margin-box;
 	}
