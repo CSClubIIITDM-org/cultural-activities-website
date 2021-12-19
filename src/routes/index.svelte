@@ -17,11 +17,11 @@
 
 	<div class="splash-page">
 		<h1 class="heading1">IIITDM KANCHEEPURAM</h1>
-		<h1 class="heading2">CULTKANCHI</h1>
+		<h1 class="heading2">CULTURAL AFFAIRS</h1>
 		<br />
 		<br />
 		<p>
-			We are a team of interdisciplinary (and jobless) engineering students from IIITDM
+			We are a team of interdisciplinary engineering students from IIITDM
 			Kancheepuram.
 		</p>
 		<p>We aim to provide a platform for our students to express their talents in fine arts.</p>
